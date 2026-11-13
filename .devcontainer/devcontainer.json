@@ -1,0 +1,17 @@
+{
+  "name": "Aethelgard (C++ / SFML)",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "Tela do jogo (senha: vscode)" }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libx11-dev libxrandr-dev libxcursor-dev libxi-dev libudev-dev libgl1-mesa-dev libfreetype-dev fonts-dejavu-core && cmake -B build -DCMAKE_BUILD_TYPE=Release",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools"]
+    }
+  }
+}
